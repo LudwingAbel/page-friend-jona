@@ -1,0 +1,184 @@
+:root {
+    --color-base: #2C3E50;
+    --color-text: #34495E;
+    --color-accent-buttons: #27AE60;
+    --color-points: #E67E22;
+    --color-background: #ECF0F1;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-base);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: var(--color-base);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--color-points);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+.tabs-container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* Estilos de las pestañas */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    flex: 1; /* Ocupa el mismo espacio */
+    text-align: center;
+    color: var(--color-base);
+}
+
+.tab-button:hover {
+    color: var(--color-accent-buttons);
+}
+
+.tab-button.active {
+    color: var(--color-accent-buttons);
+    border-bottom: 3px solid var(--color-accent-buttons);
+    font-weight: 700;
+}
+
+/* Estilos del contenido */
+.content-panel {
+    display: none;
+    padding: 20px;
+}
+
+.content-panel.active {
+    display: block;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+    max-height: 450px
+}
+
+.image-tab {
+    width: 40%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.image-tab-tipos{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.image-tab-funciones{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+}
+
+.footer-seccion{
+    text-align: center;
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+/* Diseño responsivo para tablets y móviles */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    .tab-button.active {
+        border-bottom: 3px solid var(--color-accent-buttons);
+    }
+    
+    .tabs-container {
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-tab {
+    width: 70%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.image-tab-tipos{
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down
+}
+
+.image-tab-funciones{
+    width: 100%;
+    height: 200px;
+    object-fit: scale-down;
+}
+
+.footer-seccion{
+    text-align: center;
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+
+    .video-container iframe{
+      width: 320px;
+      height: 100%;
+      overflow: hidden;
+      max-width: auto;
+    }
+}
